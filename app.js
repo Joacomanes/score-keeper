@@ -44,3 +44,17 @@ winningScoreSelect.addEventListener('change', function () {
     reset();
 
 })
+
+resetButton.addEventListener('click', reset);
+
+function reset() {
+    isGameOver = false;
+    p1Score = 0;
+    p2Score = 0;
+    p1Display.textContent = 0;
+    p2Display.textContent = 0;
+    p1Display.classList.remove('has-text-success', 'has-text-danger');
+    p2Display.classList.remove('has-text-success', 'has-text-danger');
+    p1Button.disabled = false;
+    p2Button.disabled = false;
+}
